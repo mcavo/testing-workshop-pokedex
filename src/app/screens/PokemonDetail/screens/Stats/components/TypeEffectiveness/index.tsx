@@ -26,7 +26,7 @@ function TypeEffectiveness({ name, effect, types }: Props) {
       </CustomText>
       <View style={styles.container}>
         {Object.entries(types).map(([type, modifier]) => (
-          <View style={styles.typeContainer} key={`${type}`}>
+          <View style={styles.typeContainer} key={`${effect}${type}`}>
             <PokemonTypeLabel typeName={type as PokemonType} style={styles.label} />
             <CustomText semiBold xsmall>
               {formatPokemonModifier(modifier)}

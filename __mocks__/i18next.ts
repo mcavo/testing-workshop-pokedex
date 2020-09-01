@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 const resources: Record<string, Record<string, string>> = {
-  es: {}
+  en: {}
 };
 
 const DEFAULT_LOCALE = 'en';

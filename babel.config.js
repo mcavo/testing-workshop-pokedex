@@ -18,7 +18,8 @@ module.exports = {
           '@interfaces': './src/interfaces',
           '@screens': './src/app/screens',
           '@navigationHelper': './src/app/components/AppNavigator/helper',
-          '@assets': './src/app/assets'
+          '@assets': './src/app/assets',
+          '@testsUtils': './tests/utils'
         }
       }
     ]

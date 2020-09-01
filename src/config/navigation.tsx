@@ -7,15 +7,16 @@ import Routes from '@constants/routes';
 import statusBarConfig from '@constants/statusBar';
 import { GenericObjectInterface } from '@interfaces/globalInterfaces';
 import { DefaultNavOptions } from '@interfaces/navigation';
+import { StackNavigationOptions } from '@react-navigation/stack';
 
 import fonts from './fonts';
-import { StackNavigationOptions } from '@react-navigation/stack';
 
 // Default nav options for all screens
 const defaultNavOptions = ({ route }: DefaultNavOptions) => ({
   // Change screen title from i18n traslates files
   headerTitle: i18next.t(`app:${route.name}`),
   headerBackTitle: '',
+  headerTruncatedBackTitle: '',
   headerStyle: {
     backgroundColor: white,
     borderBottomWidth: 0,
@@ -80,7 +81,7 @@ export const appScreensNavOptions: GenericObjectInterface<StackNavigationOptions
     }
   },
   [Routes.PokemonDetail]: {
-    headerTitle: undefined,
+    headerTitle: '',
     headerStyle: {
       backgroundColor: white,
       shadowOpacity: 0

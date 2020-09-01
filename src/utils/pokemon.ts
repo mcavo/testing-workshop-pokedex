@@ -2,7 +2,9 @@ import { POKEMON_STRENGHT_CHART, EFFECTIVENESS_MODIFIER_FORMAT } from '@constant
 import { PokemonType, Effect, Effectiveness } from '@interfaces/pokemon';
 import { IPokemonAbility } from '@interfaces/reduxInterfaces';
 
-import { capitalize } from './stringUtils';
+import { capitalize, formatFloat } from './stringUtils';
+
+const UNKNOWN = '???';
 
 const getEffectModifierAgainstType = (effect: Effect, againstType: PokemonType, type: PokemonType) => {
   const x = effect === Effect.STRENGTH ? type : againstType;
@@ -32,13 +34,15 @@ export const formatPokemonIndex = (index: number) => `#${`00${index}`.slice(INDE
 
 export const formatPokemonName = (name: string) => capitalize(name);
 
-export const formatPokemonTextEntry = (entry?: string) => entry?.replace(/[^\x20-\x7E]/gim, ' ') || '???';
+export const formatPokemonTextEntry = (entry?: string) => entry?.replace(/[^\x20-\x7E]/gim, ' ') || UNKNOWN;
 
-export const formatPokemonSpecies = (species?: string) => species?.replace(' Pokémon', '') || '???';
+export const formatPokemonSpecies = (species?: string) => species?.replace(' Pokémon', '') || UNKNOWN;
 
 const MEASURE_MULTIPLIER = 0.1;
-export const formatPokemonHeight = (height: number) => (height ? `${height * MEASURE_MULTIPLIER} m` : '???');
-export const formatPokemonWeight = (weight: number) => (weight ? `${weight * MEASURE_MULTIPLIER} kg` : '???');
+export const formatPokemonHeight = (height: number) =>
+  height ? `${formatFloat(height * MEASURE_MULTIPLIER)} m` : UNKNOWN;
+export const formatPokemonWeight = (weight: number) =>
+  weight ? `${formatFloat(weight * MEASURE_MULTIPLIER)} kg` : UNKNOWN;
 
 export const formatPokemonAbilities = (abilities: Array<IPokemonAbility>) =>
   abilities?.map((ability: IPokemonAbility) => capitalize(ability.ability.name)).join(', ');

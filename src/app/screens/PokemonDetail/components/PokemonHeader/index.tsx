@@ -26,7 +26,11 @@ function PokemonHeader({ id, name, types, sprites, color }: Props) {
       </View>
       <View style={styles.labelsContainer}>
         {types?.map(({ type: { name: pokemonType } }: IPokemonType) => (
-          <PokemonTypeLabel key={name} typeName={pokemonType as PokemonType} color={color} />
+          <PokemonTypeLabel
+            key={`${name}${pokemonType}`}
+            typeName={pokemonType as PokemonType}
+            color={color}
+          />
         ))}
       </View>
       <View style={styles.imageContainer}>

@@ -1,0 +1,244 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Login /> Login Snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#E5E5E5",
+      "flex": 1,
+      "paddingHorizontal": 20,
+      "paddingVertical": 10,
+    }
+  }
+>
+  <RCTSafeAreaView
+    emulateUnlessSupported={true}
+  >
+    <Text
+      allowFontScaling={false}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "color": "#555555",
+            "fontFamily": "Montserrat",
+            "fontSize": 25.142857142857142,
+            "fontStyle": "normal",
+            "fontWeight": "400",
+          },
+          Array [
+            Object {
+              "color": "#555555",
+              "fontFamily": "Montserrat",
+              "fontSize": 25.142857142857142,
+              "fontStyle": "normal",
+              "fontWeight": "600",
+            },
+            Object {
+              "textAlign": "center",
+            },
+            Object {
+              "color": "#A7A7A7",
+            },
+            Object {
+              "fontSize": 56.57142857142857,
+            },
+          ],
+          Object {
+            "marginVertical": 30,
+          },
+        ]
+      }
+    >
+      LOGIN:POKEDEX
+    </Text>
+    <View>
+      <TextInput
+        allowFontScaling={false}
+        onBlur={[Function]}
+        onChangeText={[Function]}
+        placeholder="FIELDS:EMAIL"
+        rejectResponderTermination={true}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#FFF",
+              "borderColor": "#E5E5E5",
+              "borderRadius": 4,
+              "borderWidth": 1,
+              "padding": 10,
+            },
+            Object {},
+            undefined,
+          ]
+        }
+        underlineColorAndroid="transparent"
+        value=""
+      />
+      <Text
+        allowFontScaling={false}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#555555",
+              "fontFamily": "Montserrat",
+              "fontSize": 25.142857142857142,
+              "fontStyle": "normal",
+              "fontWeight": "400",
+            },
+            Array [
+              Object {
+                "fontSize": 18.857142857142858,
+              },
+              Object {
+                "color": "#F04338",
+              },
+            ],
+            Object {
+              "marginBottom": 14,
+              "marginLeft": 10,
+              "marginTop": 6,
+              "maxHeight": 22,
+            },
+          ]
+        }
+      />
+    </View>
+    <View>
+      <TextInput
+        allowFontScaling={false}
+        onBlur={[Function]}
+        onChangeText={[Function]}
+        placeholder="FIELDS:PASSWORD"
+        rejectResponderTermination={true}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#FFF",
+              "borderColor": "#E5E5E5",
+              "borderRadius": 4,
+              "borderWidth": 1,
+              "padding": 10,
+            },
+            Object {},
+            undefined,
+          ]
+        }
+        underlineColorAndroid="transparent"
+        value=""
+      />
+      <Text
+        allowFontScaling={false}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#555555",
+              "fontFamily": "Montserrat",
+              "fontSize": 25.142857142857142,
+              "fontStyle": "normal",
+              "fontWeight": "400",
+            },
+            Array [
+              Object {
+                "fontSize": 18.857142857142858,
+              },
+              Object {
+                "color": "#F04338",
+              },
+            ],
+            Object {
+              "marginBottom": 14,
+              "marginLeft": 10,
+              "marginTop": 6,
+              "maxHeight": 22,
+            },
+          ]
+        }
+      />
+    </View>
+    <View
+      accessible={true}
+      focusable={false}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "borderRadius": 4,
+            "borderWidth": 2,
+            "flexDirection": "row",
+            "height": 85.71428571428571,
+            "justifyContent": "center",
+            "minWidth": 300,
+            "paddingHorizontal": 64.28571428571428,
+          },
+          Object {
+            "backgroundColor": "#288CCB",
+            "borderColor": "#FFF",
+            "borderWidth": 0,
+            "shadowColor": "#F1F1F1",
+            "shadowOffset": Object {
+              "height": 1,
+              "width": 0,
+            },
+            "shadowOpacity": 1,
+            "shadowRadius": 10,
+            "width": "auto",
+          },
+          Array [
+            Object {
+              "minWidth": 300,
+            },
+          ],
+          undefined,
+        ]
+      }
+    >
+      <Text
+        allowFontScaling={false}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#555555",
+              "fontFamily": "Montserrat",
+              "fontSize": 25.142857142857142,
+              "fontStyle": "normal",
+              "fontWeight": "400",
+            },
+            Array [
+              Object {
+                "fontSize": 22,
+              },
+              Object {
+                "fontFamily": "Montserrat",
+                "fontStyle": "normal",
+                "fontWeight": "600",
+              },
+            ],
+            Array [
+              Object {
+                "color": "#FFF",
+              },
+              Array [
+                undefined,
+              ],
+              undefined,
+            ],
+          ]
+        }
+      >
+        LOGIN:SUBMIT
+      </Text>
+    </View>
+  </RCTSafeAreaView>
+</View>
+`;
