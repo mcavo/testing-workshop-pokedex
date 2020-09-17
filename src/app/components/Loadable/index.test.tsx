@@ -6,8 +6,9 @@ import withLoadable from './index';
 
 describe('withLoadable', () => {
   const LoadableView = withLoadable(() => true)(View);
-  test('withLoadable Snapshot', () => {
+  test('is loading snapshot', () => {
     const loadableView = render(<LoadableView />).toJSON();
     expect(loadableView).toMatchSnapshot();
   });
+
 });

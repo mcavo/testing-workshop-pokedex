@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`withLoadable withLoadable Snapshot 1`] = `
+exports[`withLoadable is loading snapshot 1`] = `
 <View
   style={
     Object {
