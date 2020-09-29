@@ -39,7 +39,7 @@ export const formatPokemonTextEntry = (entry?: string) => entry?.replace(/[^\x20
 export const formatPokemonSpecies = (species?: string) => species?.replace(' Pokémon', '') || UNKNOWN;
 
 const MEASURE_MULTIPLIER = 0.1;
-export const formatPokemonHeight = (height: number) =>
+export const formatPokemonHeight = (height?: number) =>
   height ? `${formatFloat(height * MEASURE_MULTIPLIER)} m` : UNKNOWN;
 export const formatPokemonWeight = (weight: number) =>
   weight ? `${formatFloat(weight * MEASURE_MULTIPLIER)} kg` : UNKNOWN;

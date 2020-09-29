@@ -1,7 +1,14 @@
+import { formatPokemonHeight } from './pokemon';
 import React from 'react';
 
 describe('formatPokemonHeight', () => {
-  test.todo('does something');
+  test('is undefined', () => {
+    expect(formatPokemonHeight(undefined)).toBe('???');
+  });
+
+  test('is 245', () => {
+    expect(formatPokemonHeight(245)).toBe('24.50 m');
+  })
 });
 
 describe('formatPokemonName', () => {
