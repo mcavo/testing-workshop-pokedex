@@ -1,14 +1,15 @@
 import { formatPokemonHeight } from './pokemon';
-import React from 'react';
+
+const INTEGER_EXAMPLE = 245;
 
 describe('formatPokemonHeight', () => {
   test('is undefined', () => {
     expect(formatPokemonHeight(undefined)).toBe('???');
   });
 
-  test('is 245', () => {
-    expect(formatPokemonHeight(245)).toBe('24.50 m');
-  })
+  test('is INTEGER', () => {
+    expect(formatPokemonHeight(INTEGER_EXAMPLE)).toBe('24.50 m');
+  });
 });
 
 describe('formatPokemonName', () => {

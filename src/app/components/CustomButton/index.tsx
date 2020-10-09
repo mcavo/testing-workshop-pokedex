@@ -77,6 +77,7 @@ const CustomButton = ({
     </View>
   ) : (
     <TouchableHighlight
+      accessibilityRole="button"
       onPressIn={handlePressIn}
       onPressOut={handlePressOut}
       style={[styles.container, BUTTON_STYLE, customStyles(), style]}

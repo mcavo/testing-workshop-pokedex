@@ -7,7 +7,7 @@ import { Action } from '@interfaces/reduxInterfaces';
 
 export const actions = createTypes(completeTypes(['LOGIN', 'LOGOUT'], ['AUTH_INIT']), '@@AUTH');
 
-const TARGETS = {
+export const TARGETS = {
   CURRENT_USER: 'currentUser'
 };
 

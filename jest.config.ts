@@ -12,7 +12,7 @@ export default {
   ],
   coveragePathIgnorePatterns: ['/node_modules/', '/jest'],
   setupFilesAfterEnv: [
-    '<rootDir>/__mocks__/setup.js',
+    '<rootDir>/setup.js',
     './node_modules/react-native-gesture-handler/jestSetup.js',
     '@testing-library/jest-native/extend-expect'
   ],

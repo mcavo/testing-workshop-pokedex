@@ -43,3 +43,34 @@ export const passwordRules = {
   ...minLengthField(password, MIN_PASSWORD_LENGTH),
   ...maxLengthField(password, MAX_PASSWORD_LENGTH)
 };
+
+export const validationsWrapper = (validations: Array<(value: string) => string | undefined>) => (
+  value: string
+) => {
+  // eslint-disable-next-line init-declarations
+  let finalError: string | undefined;
+  validations.some(validation => {
+    const result = validation(value);
+    if (result) finalError = result;
+    return !!result;
+  });
+  return finalError;
+};
+
+export const validateRequired = (field: string) => (value: string) =>
+  value ? undefined : i18next.t('VALIDATIONS:REQUIRED', { field });
+
+export const validateEmailFormat = (field: string) => (value: string) =>
+  value && EMAIL_REGEX.test(value)
+    ? undefined
+    : i18next.t('VALIDATIONS:INVALID_FORMAT', { field: field.toLowerCase() });
+
+  export const validateMinLength = (minValue: number, field: string) => (value: string) =>
+    value && value.length >= minValue
+      ? undefined
+      : i18next.t('VALIDATIONS:MIN_LENGTH', { count: minValue, field });
+
+export const validateMaxLength = (maxValue: number, field: string) => (value: string) =>
+  value && value.length <= maxValue
+    ? undefined
+    : i18next.t('VALIDATIONS:MAX_LENGTH', { count: maxValue, field });

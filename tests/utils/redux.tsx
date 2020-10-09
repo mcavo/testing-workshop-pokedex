@@ -13,7 +13,7 @@ const reducers = combineReducers({
 
 interface ReduxProps {
   initialState?: IState;
-  store?: Store<any, AnyAction>
+  store?: Store<any, AnyAction>;
   renderOptions?: RenderOptions;
 }
 

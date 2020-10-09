@@ -10,7 +10,7 @@ export const actions = createTypes(
   '@@POKEMON'
 );
 
-const TARGETS = {
+export const targets = {
   POKEMON_LIST: 'pokemonList',
   POKEMON_DETAIL: 'pokemonDetail',
   POKEMON_SPECIES: 'pokemonSpecies'
@@ -24,7 +24,7 @@ const actionCreators = {
     if (refresh || (next && !loading))
       dispatch({
         type: actions.GET_POKEMONS,
-        target: TARGETS.POKEMON_LIST,
+        target: targets.POKEMON_LIST,
         payload: offset,
         service: PokemonService.getPokemonList
       });
@@ -33,20 +33,20 @@ const actionCreators = {
     const { name } = getState().pokemon.pokemonDetail;
     dispatch({
       type: actions.GET_POKEMON_SPECIES,
-      target: TARGETS.POKEMON_SPECIES,
+      target: targets.POKEMON_SPECIES,
       payload: name,
       service: PokemonService.getPokemonSpecies
     });
   },
   getPokemonDetail: (pokemon: string) => ({
     type: actions.GET_POKEMONS_DETAIL,
-    target: TARGETS.POKEMON_DETAIL,
+    target: targets.POKEMON_DETAIL,
     service: PokemonService.getPokemonDetail,
     payload: pokemon
   }),
   getPokemonByType: (pokemonType: PokemonType) => ({
     type: actions.GET_POKEMONS_BY_TYPE,
-    target: TARGETS.POKEMON_LIST,
+    target: targets.POKEMON_LIST,
     service: PokemonService.getPokemonByType,
     payload: pokemonType,
     successSelector: (response: ApiOkResponse<IPokemonListResponse>) => response.data!!.pokemon
